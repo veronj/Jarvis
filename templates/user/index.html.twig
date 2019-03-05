@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+<div class="row flex">
+    {% for user in users %}
+        <div class="col-3">
+        <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">
+        <a href="{{ path('user.show', {'id': user.id}) }}">{{ user.firstname }} {{ user.lastname }}</a>
+        <div>Utilisateur crée le : {{ user.createdAt | date('d/m/Y') }}</div>  
+        <div>Utilisateur modifié le : {{ user.updatedAt | date('d/m/Y') }}</div>       
+        </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

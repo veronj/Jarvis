@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jarvis{% endblock %}
+
+{% block body %}
+<h1>Ajouter un utilisateur</h1>
+<div class="container">
+<div class="row flex">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit"/>
+    {{ form_end(form) }}
+</div>
+</div>
+{% endblock %}
